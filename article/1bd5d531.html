@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.blogchenxi.top","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="2.1 逻辑代数的基本概念导言： ​        在数字电路中，主要研究的是电路输入输出之间的逻辑关系，因此数字电路又称逻辑电路，其研究工具是逻辑代数(布尔代数)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第二章、逻辑代数基础">
+<meta property="og:url" content="https://www.blogchenxi.top/article/1bd5d531.html">
+<meta property="og:site_name" content="晨曦&#39;s 部落阁">
+<meta property="og:description" content="2.1 逻辑代数的基本概念导言： ​        在数字电路中，主要研究的是电路输入输出之间的逻辑关系，因此数字电路又称逻辑电路，其研究工具是逻辑代数(布尔代数)。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007142829582.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007164958507.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007165433812.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007165732070.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007165703125.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007171737023.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007172122798.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007172136317.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007172410710.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007173150071.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007172437775.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007172449002.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007173204371.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007172459889.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007173214210.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007172510366.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007173233623.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007173657055.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007173815897.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007174204021.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007174236648.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007174318798.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007174519958.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007233054141.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007233252762.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007233717895.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007233725771.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007234341232.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007234540200.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007234845900.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007235301740.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008001009120.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008001229349.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008001446437.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008001454338.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008001902628.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008002003832.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008002014345.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008002022520.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008002211788.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008002306690.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008004231531.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008004239661.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211008004244912.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010144135480.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010144234741.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010144427128.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010145252129.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010145301812.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010145442336.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150400627.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150406732.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150414360.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150448160.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150454571.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150841189.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150717604.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150731714.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150905421.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010150911754.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010151110520.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010151120577.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010151126366.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010151157803.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010151422554.png">
+<meta property="og:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211010151446432.png">
+<meta property="article:published_time" content="2021-10-07T05:42:58.000Z">
+<meta property="article:modified_time" content="2021-10-10T07:14:52.193Z">
+<meta property="article:author" content="Chen Xi">
+<meta property="article:tag" content="逻辑函数">
+<meta property="article:tag" content="逻辑变量">
+<meta property="article:tag" content="逻辑运算">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.blogchenxi.top/article/1bd5d531/image-20211007142829582.png">
+
+<link rel="canonical" href="https://www.blogchenxi.top/article/1bd5d531.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>第二章、逻辑代数基础 | 晨曦's 部落阁</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="晨曦's 部落阁" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">晨曦's 部落阁</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.blogchenxi.top/article/1bd5d531.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Chen Xi">
+      <meta itemprop="description" content="学无止境，仍需努力！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晨曦's 部落阁">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          第二章、逻辑代数基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-07 13:42:58" itemprop="dateCreated datePublished" datetime="2021-10-07T13:42:58+08:00">2021-10-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-10 15:14:52" itemprop="dateModified" datetime="2021-10-10T15:14:52+08:00">2021-10-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/" itemprop="url" rel="index"><span itemprop="name">-数字逻辑</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/article/1bd5d531.html#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="article/1bd5d531.html" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="2-1-逻辑代数的基本概念"><a href="#2-1-逻辑代数的基本概念" class="headerlink" title="2.1 逻辑代数的基本概念"></a><strong>2.1 逻辑代数的基本概念</strong></h3><p><strong>导言：</strong></p>
+<p>​        在数字电路中，主要研究的是电路输入输出之间的逻辑关系，因此数字电路又称逻辑电路，其研究工具是逻辑代数(布尔代数)。</p>
+<span id="more"></span>
+
+<h4 id="2-1-1-逻辑变量"><a href="#2-1-1-逻辑变量" class="headerlink" title="2.1.1 逻辑变量"></a><strong>2.1.1 逻辑变量</strong></h4><p>逻辑变量：<font color="red">逻辑0和逻辑1</font></p>
+<p>这里0和1不表示数的大小<font color="red">(不能直接进行比较，无大小区分)</font>，逻辑值0和1可用来表征矛盾的双方，两种对立的状态，判断事件真伪和是非，它是形式符号，并无大小和正负之分。<font color="red"> (仅代表相互矛盾、相互对立的两种逻辑状态)</font></p>
+<h4 id="2-1-2-逻辑运算"><a href="#2-1-2-逻辑运算" class="headerlink" title="2.1.2 逻辑运算"></a>2.1.2 逻辑运算</h4><p>虽然数字系统逻辑电路种类繁多，功能各异，千变万化，但它们的逻辑关系都是由<font color="red">“或”、”与”、”非”</font>运算组合而成的。这3种基本运算反映了逻辑电路中3种最基本的逻辑关系，其他逻辑运算都是通过这3种基本运算来实现的。</p>
+<h5 id="1-”或“运算"><a href="#1-”或“运算" class="headerlink" title="1. ”或“运算"></a><strong>1. ”或“运算</strong></h5><p>对于某一逻辑问题，在决定某一事件发生的多个条件中，<font color="red">如果只要一个或一个以上条件成立，事件便可发生，则这种因果关系称为”或”逻辑。</font>在逻辑代数中，”或”逻辑关系用”或”运算描述，或”运算又称<font color="red">逻辑加，其运算符号为”+”，有时也用”∨”表示</font></p>
+<center>F=A+B   或者  F=A∨B</center>
+
+<p>读作”F等于A或B”。这里，A，B是参与运算的两个逻辑变量，F表示运算结果。意思是：A，B中只要有一个为1，则F为1；仅当A，B均为0时，F才为0。该逻辑关系可用表来描述。</p>
+<center><b>“或运算表”</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>A</strong></th>
+<th align="center"><strong>B</strong></th>
+<th align="center"><strong>F</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+</tbody></table>
+<p><strong>由表可得出”或”运算的运算法则为</strong></p>
+<p>​    <strong>0+0=0  1+0=1</strong></p>
+<p>​    <strong>0+1=1  1+1=1</strong></p>
+<p><img src="/article/1bd5d531/image-20211007142829582.png" alt="image-20211007142829582"></p>
+<h5 id="2-”与“运算"><a href="#2-”与“运算" class="headerlink" title="2. ”与“运算"></a><strong>2. ”与“运算</strong></h5><p>对于某一逻辑问题，<font color="red">如果决定某一事件发生的多个条件必须同时具备，事件才能发生，则这种因果关系称为”与”逻辑。</font>逻辑代数中，”与”逻辑关系用”与”运算描述。”与”运算又称为<font color="red">逻辑乘，其运算符号为”·”，有时也用”∧”表示。</font>两变量”与”运算关系可表示：</p>
+<center><b>F=A·B   或者  F=A∧B</b></center>
+
+<p>读作”F等于A与B”。意思是：若A，B均为1，则F为1；否则F为0。</p>
+<center><b>“与运算表”</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>A</strong></th>
+<th align="center"><strong>B</strong></th>
+<th align="center"><strong>F</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+</tbody></table>
+<p>由表可得出“与”运算的运算法则为</p>
+<p>​    <strong>0·0=0  1·0=0</strong></p>
+<p>​    <strong>0·1=0  1·1=1</strong></p>
+<p><img src="/article/1bd5d531/image-20211007164958507.png" alt="image-20211007164958507"></p>
+<h5 id="3-”非“运算"><a href="#3-”非“运算" class="headerlink" title="3. ”非“运算"></a><strong>3. ”非“运算</strong></h5><p>对某一逻辑问题，<font color="red">如果某一事件的发生取决于条件的否定，即事件与事件发生的条件之间构成矛盾，则这种因果关系称为”非”逻辑。</font>逻辑代数中，”非”逻辑用”非”运算描述。”非”运算也称<font color="red">求反运算或者逻辑否定。其运算符号为”-“，有时也用”┐”表示。</font>“非”运算的逻辑关系可表示：</p>
+<p><img src="/article/1bd5d531/image-20211007165433812.png" alt="image-20211007165433812"></p>
+<p>读作”F等于A非”。意思是：若A为0，则F为1；反之，若A为1，则F为0。</p>
+<center><b>“非运算表”</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center"><strong>A</strong></th>
+<th align="center"><strong>F</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p>由表可得出“非”运算的运算法则为</p>
+<p><img src="/article/1bd5d531/image-20211007165732070.png" alt="image-20211007165732070"></p>
+<p><img src="/article/1bd5d531/image-20211007165703125.png" alt="image-20211007165703125"></p>
+<h4 id="2-1-3-逻辑函数"><a href="#2-1-3-逻辑函数" class="headerlink" title="2.1.3 逻辑函数"></a><strong>2.1.3 逻辑函数</strong></h4><h5 id="1-逻辑函数的定义"><a href="#1-逻辑函数的定义" class="headerlink" title="1. 逻辑函数的定义"></a><strong>1. 逻辑函数的定义</strong></h5><p>设某一电路的输入逻辑变量为A<sub>1</sub>，A<sub>2</sub>，….，A<sub>n</sub>，输出逻辑变量为F。如果当A<sub>1</sub>，A<sub>2</sub>，…A<sub>n</sub>的值确定后，F的值就唯一地被定下来，则F称为A<sub>1</sub>，A<sub>2</sub>，…，A<sub>n</sub>，的逻辑函数，记为F=f(A<sub>1</sub>，A<sub>2</sub>，….，A<sub>n</sub>)</p>
+<ul>
+<li><p><font color="red">逻辑电路的功能可由相应的逻辑函数完全描述</font></p>
+</li>
+<li><p>与普通函数概念相比逻辑函数有如下特点：</p>
+<p>(1)逻辑变量与逻辑函数的取值只有0和1。</p>
+<p>(2)逻辑函数与逻辑变量的关系由“与”、“或”、“非”运算决定。</p>
+</li>
+</ul>
+<h5 id="2-逻辑函数的相等"><a href="#2-逻辑函数的相等" class="headerlink" title="2. 逻辑函数的相等"></a><strong>2. 逻辑函数的相等</strong></h5><p>设有两个逻辑函数</p>
+<p>​        F<sub>1</sub>=f<sub>1</sub>(A<sub>1</sub>，A<sub>2</sub>，……，A<sub>n</sub>)</p>
+<p>​        F<sub>2</sub>=f<sub>2</sub>(A<sub>1</sub>，A<sub>2</sub>，……，A<sub>n</sub>)</p>
+<p><font color="red">若对应于A<sub>1</sub>，A<sub>2</sub>，….，A<sub>n</sub>的变量任何一组取值，F<sub>1</sub>和F<sub>2</sub>的值都相同，则称函数F<sub>1</sub>和函数F<sub>2</sub>相等，记作F<sub>1</sub>=F<sub>2</sub></font></p>
+<h3 id="2-2-逻辑代数的公理、定理及规则"><a href="#2-2-逻辑代数的公理、定理及规则" class="headerlink" title="2.2 逻辑代数的公理、定理及规则"></a>2.2 逻辑代数的公理、定理及规则</h3><h4 id="2-2-1-逻辑代数的公理和基本定理"><a href="#2-2-1-逻辑代数的公理和基本定理" class="headerlink" title="2.2.1 逻辑代数的公理和基本定理"></a><strong>2.2.1 逻辑代数的公理和基本定理</strong></h4><h5 id="1-公理系统"><a href="#1-公理系统" class="headerlink" title="1. 公理系统"></a><strong>1. 公理系统</strong></h5><p><img src="/article/1bd5d531/image-20211007171737023.png" alt="image-20211007171737023"></p>
+<p><strong>0-1律法则：</strong></p>
+<p>和0相或，是本身，和1相或，是1</p>
+<p>和1相与，是本身，和0相与，是0</p>
+<h5 id="2-基本定理"><a href="#2-基本定理" class="headerlink" title="2. 基本定理"></a><strong>2. 基本定理</strong></h5><table>
+<thead>
+<tr>
+<th align="center">定理1</th>
+<th align="center"><strong>0+0=0</strong></th>
+<th align="center"><strong>1+0=1</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center"><strong>0+1=1</strong></td>
+<td align="center"><strong>1+1=1</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><strong>0·0=0</strong></td>
+<td align="center"><strong>1·0=0</strong></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><strong>0·1=0</strong></td>
+<td align="center"><strong>1·1=1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>推论</strong></td>
+<td align="center"><img src="/article/1bd5d531/image-20211007172122798.png" alt="image-20211007172122798"></td>
+<td align="center"><img src="/article/1bd5d531/image-20211007172136317.png" alt="image-20211007172136317"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>定理2(自等律)</strong></th>
+<th align="center"><strong>A+A=A</strong></th>
+<th align="center"><strong>A·A=A</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>定理3(吸收律)</strong></td>
+<td align="center"><strong>A+A·B=A</strong></td>
+<td align="center"><strong>A·(A+B)=A</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>定理4(吸收律)</strong></td>
+<td align="center"><strong><img src="/article/1bd5d531/image-20211007172410710.png" alt="image-20211007172410710"></strong></td>
+<td align="center"><img src="/article/1bd5d531/image-20211007173150071.png" alt="image-20211007173150071"></td>
+</tr>
+<tr>
+<td align="center"><strong>定理5(非非律)</strong></td>
+<td align="center"><strong><img src="/article/1bd5d531/image-20211007172437775.png" alt="image-20211007172437775"></strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>定理6(摩根定理) 断线变号</strong></td>
+<td align="center"><strong><img src="/article/1bd5d531/image-20211007172449002.png" alt="image-20211007172449002"></strong></td>
+<td align="center"><img src="/article/1bd5d531/image-20211007173204371.png" alt="image-20211007173204371"></td>
+</tr>
+<tr>
+<td align="center"><strong>定理7</strong></td>
+<td align="center"><strong><img src="/article/1bd5d531/image-20211007172459889.png" alt="image-20211007172459889"></strong></td>
+<td align="center"><img src="/article/1bd5d531/image-20211007173214210.png" alt="image-20211007173214210"></td>
+</tr>
+<tr>
+<td align="center"><strong>定理8(冗余律)</strong></td>
+<td align="center"><strong><img src="/article/1bd5d531/image-20211007172510366.png" alt="image-20211007172510366"></strong></td>
+<td align="center"><img src="/article/1bd5d531/image-20211007173233623.png" alt="image-20211007173233623"></td>
+</tr>
+</tbody></table>
+<h4 id="2-2-2-逻辑代数的重要规则"><a href="#2-2-2-逻辑代数的重要规则" class="headerlink" title="2.2.2 逻辑代数的重要规则"></a><strong>2.2.2 逻辑代数的重要规则</strong></h4><h5 id="1-代入规则"><a href="#1-代入规则" class="headerlink" title="1. 代入规则"></a><strong>1. 代入规则</strong></h5><p><font color="red">任何一个含有变量A的逻辑等式，如果将所有出现A的位置都代之以同一个逻辑函数F，则等式仍然成立。这个规则称为代入规则。</font></p>
+<p>例如：给定逻辑等式A(B+C)=AB+AC，若用A+BC代替A，则该等式仍然成立，即：</p>
+<center><b>(A+BC)(B+C)=(A+BC)B+(A+BC)C</b></center>
+
+<p>由公理5<img src="/article/1bd5d531/image-20211007173657055.png" alt="image-20211007173657055">同样有等式：</p>
+<p><img src="/article/1bd5d531/image-20211007173815897.png" alt="image-20211007173815897"></p>
+<h5 id="2-反演规则"><a href="#2-反演规则" class="headerlink" title="2. 反演规则"></a><strong>2. 反演规则</strong></h5><p>如果将逻辑函数F中所有的”.”变成”+”，”+”变成”.”，”0”变成”1”，”1”变成”0”，原变量变成反变量，反变量变成原变量，所得到的新函数是原函数的反函数  <img src="/article/1bd5d531/image-20211007174204021.png" alt="image-20211007174204021"></p>
+<p>例如：</p>
+<p><img src="/article/1bd5d531/image-20211007174236648.png" alt="image-20211007174236648"></p>
+<p>注意：<font color="red">保持原函式中运算符号的优先顺序不变，并且两个以上变量的公用非号保持不变。</font></p>
+<p>例如：</p>
+<p><img src="/article/1bd5d531/image-20211007174318798.png" alt="image-20211007174318798"></p>
+<h5 id="2-对偶规则"><a href="#2-对偶规则" class="headerlink" title="2. 对偶规则"></a><strong>2. 对偶规则</strong></h5><p>如果将逻辑函数F中所有的”.”变成”+”,”+”变成”.”,”0”变成”1”，”1”变成”0”，<font color="red">而逻辑变量保持不变，则得到F的对偶式F’。F与F’互为对偶式。</font></p>
+<p>求某一函数F的对偶式时，同样要注意保持原函数的运算顺序不变。</p>
+<p>对偶规则：<font color="red">若两个逻辑函数F和G相等，则其对偶式F’和G’也相等。</font></p>
+<p><img src="/article/1bd5d531/image-20211007174519958.png" alt="image-20211007174519958"></p>
+<h3 id="2-3-逻辑函数表达式的形式与转换"><a href="#2-3-逻辑函数表达式的形式与转换" class="headerlink" title="2.3 逻辑函数表达式的形式与转换"></a><strong>2.3 逻辑函数表达式的形式与转换</strong></h3><h4 id="2-3-1-逻辑函数的表示法"><a href="#2-3-1-逻辑函数的表示法" class="headerlink" title="2.3.1 逻辑函数的表示法"></a><strong>2.3.1 逻辑函数的表示法</strong></h4><p>描述逻辑函数的常用方法有<font color="red">逻辑表达式、真值表和卡诺图</font></p>
+<p>逻辑表达式：不唯一</p>
+<p>真值表和卡诺图：一一对应</p>
+<h5 id="1-逻辑表达式"><a href="#1-逻辑表达式" class="headerlink" title="1. 逻辑表达式"></a><strong>1. 逻辑表达式</strong></h5><p>逻辑表达式是由<font color="red">逻辑变量、常量和运算符所构成的式子。</font></p>
+<p><img src="/article/1bd5d531/image-20211007233054141.png" alt="image-20211007233054141"></p>
+<p>为简便起见，书写逻辑表达式时可按下列规则省略某些括号和运算符号：</p>
+<p><img src="/article/1bd5d531/image-20211007233252762.png" alt="image-20211007233252762"></p>
+<h5 id="2-真值表"><a href="#2-真值表" class="headerlink" title="2. 真值表"></a><strong>2. 真值表</strong></h5><p>用真值表描述逻辑函数的方法是一种表格表示法。换言之，真值表是一种由逻辑变量的所有可能取值组合及其对应的逻辑函数值所构成的表格。</p>
+<p>真值表由两部分组成，<font color="red">左边一栏列出变量的所有取值组合，通常各变量取值组合按二进制数码顺序给出；右边一栏为逻辑函数值。</font></p>
+<p><img src="/article/1bd5d531/image-20211007233717895.png" alt="image-20211007233717895"><img src="/article/1bd5d531/image-20211007233725771.png" alt="image-20211007233725771"></p>
+<p><strong>注意：</strong></p>
+<p>n个变量可以有2<sup>n</sup>个组合，一般按二进制的顺序，输出与输入状态一一对应，列出所有可能的状态</p>
+<h5 id="3-卡诺图"><a href="#3-卡诺图" class="headerlink" title="3. 卡诺图"></a><strong>3. 卡诺图</strong></h5><p>卡诺图是由表示逻辑变量的所有可能组合的小方格所构成的平面图，一种用图形描述逻辑函数的方法。在逻辑函数化简中起到非常重要的作用。</p>
+<h4 id="2-3-2-逻辑函数表达式的基本形式"><a href="#2-3-2-逻辑函数表达式的基本形式" class="headerlink" title="2.3.2 逻辑函数表达式的基本形式"></a><strong>2.3.2 逻辑函数表达式的基本形式</strong></h4><p>两种基本形式：<font color="red">积之和”表达式与“和之积”表达式。</font></p>
+<p><font color="red">所谓“积之和”（与-或式）</font>，是指一个函数表达式中包含着若干个“积”项，每个“积”项中可有一个或多个以原变量或反变量形式出现的字母，所有这些“积”项的“和”就表示一个函数。</p>
+<p><img src="/article/1bd5d531/image-20211007234341232.png" alt="image-20211007234341232"></p>
+<p><font color="red">所谓“和之积”(或-与式)，</font>是指一个函数表达式中包含若干个“和”项，每个“和”项中有任意个以原变量或反变量形式出现的字母，所有这些“和”项的“积”就表示一个函数。</p>
+<p><img src="/article/1bd5d531/image-20211007234540200.png" alt="image-20211007234540200"></p>
+<p>当然，逻辑函数也可以表示成其他的形式，例如：</p>
+<p><img src="/article/1bd5d531/image-20211007234845900.png" alt="image-20211007234845900"></p>
+<p>这种表示形式既不是“与-或”表达式，也不是“或-与”表达式。但可以转换成“与-或”表达式或者“或-与表达式”。</p>
+<h4 id="2-3-3-逻辑函数表达式的标准形式"><a href="#2-3-3-逻辑函数表达式的标准形式" class="headerlink" title="2.3.3 逻辑函数表达式的标准形式"></a><strong>2.3.3 逻辑函数表达式的标准形式</strong></h4><h5 id="1-最小项表达式"><a href="#1-最小项表达式" class="headerlink" title="1. 最小项表达式"></a><strong>1. 最小项表达式</strong></h5><p>一个具有n个变量的函数的“积”项包含全部n个变量，每个变量都以原变量或反变量形式出现，且仅出现一次，则这个“积”项被称为<font color="red">最小项。</font></p>
+<p>假如一个函数完全由最小项所组成，那么该函数表达式称为标准“积之和”表达式<font color="red">（标准与-或式）</font>，或“最小项之和”表达式。</p>
+<p><img src="/article/1bd5d531/image-20211007235301740.png" alt="image-20211007235301740"></p>
+<p>这是一个3变量函数标准“与-或”式（最小项表达式），其变量按A，B，C顺序排列，函数本身由4个最小项组成。</p>
+<p><img src="/article/1bd5d531/image-20211008001009120.png" alt="image-20211008001009120"></p>
+<p>3个变量A、B、C可组成8(2<sup>3</sup>)个最小项</p>
+<p>4个变量可组成16(2<sup>4</sup>)个最小项，记作m<sub>0</sub>-m<sub>15</sub></p>
+<p>写出4变量函数的所有最小项</p>
+<p><img src="/article/1bd5d531/image-20211008001229349.png" alt="image-20211008001229349"></p>
+<p>其中，符号“Σ”表示各项求“或”，后面括号内的数字表示函数的各最小项。</p>
+<h5 id="2-最小项的性质"><a href="#2-最小项的性质" class="headerlink" title="2. 最小项的性质"></a><strong>2. 最小项的性质</strong></h5><p><img src="/article/1bd5d531/image-20211008001446437.png" alt="image-20211008001446437"></p>
+<p><img src="/article/1bd5d531/image-20211008001454338.png" alt="image-20211008001454338"></p>
+<h5 id="3-最大项表达式-不做要求"><a href="#3-最大项表达式-不做要求" class="headerlink" title="3. 最大项表达式(不做要求)"></a><strong>3. 最大项表达式(不做要求)</strong></h5><h4 id="2-3-4-逻辑函数表达式的转换"><a href="#2-3-4-逻辑函数表达式的转换" class="headerlink" title="2.3.4 逻辑函数表达式的转换"></a><strong>2.3.4 逻辑函数表达式的转换</strong></h4><p>任何一个逻辑函数，总可以将其转换成“最小项之和”的形式。</p>
+<p>逻辑函数表达式的形式多种多样，但都可以转换成标准形式，通常采用两种方法：<font color="red">代数转换法和真值转换法。</font></p>
+<h5 id="1-代数转换法"><a href="#1-代数转换法" class="headerlink" title="1. 代数转换法"></a><strong>1. 代数转换法</strong></h5><p>用代数法求一个函数“最小项之和”的形式，一般分为两步：</p>
+<p>第一步：将函数表达式转换成一般“与-或”式</p>
+<p>第二步：反复使用<img src="/article/1bd5d531/image-20211008001902628.png" alt="image-20211008001902628">将非最小项的“与项”都扩展成最小项。</p>
+<p>第三步：整理（重复项）</p>
+<p><img src="/article/1bd5d531/image-20211008002003832.png" alt="image-20211008002003832"></p>
+<p><img src="/article/1bd5d531/image-20211008002014345.png" alt="image-20211008002014345"></p>
+<p><img src="/article/1bd5d531/image-20211008002022520.png" alt="image-20211008002022520"></p>
+<h5 id="2-真值表转换法"><a href="#2-真值表转换法" class="headerlink" title="2. 真值表转换法"></a><strong>2. 真值表转换法</strong></h5><p>一个逻辑函数的真值表与它的“最小项之和”的形式有一一对应的关系。假如在函数F的真值表中有n组变量，其取值使函数F的值为1，那么函数F的“最小项之和”的形式由这n组变量取值对应的n个最小项组成。</p>
+<p>函数F的最小项表达式由使F取值为1的全部最小项之和组成。</p>
+<p><img src="/article/1bd5d531/image-20211008002211788.png" alt="image-20211008002211788"></p>
+<p><img src="/article/1bd5d531/image-20211008002306690.png" alt="image-20211008002306690"></p>
+<h5 id="3-卡诺图转换法"><a href="#3-卡诺图转换法" class="headerlink" title="3. 卡诺图转换法"></a><strong>3. 卡诺图转换法</strong></h5><p>第一步：将函数表达式变换成一般“与-或”式。</p>
+<p>第二步：将函数在卡诺图上表示出来。</p>
+<p>第三步：找出卡诺图中函数值为1的最小项，所有最小项之和即为标准与或式。</p>
+<h3 id="2-4-逻辑函数的化简"><a href="#2-4-逻辑函数的化简" class="headerlink" title="2.4 逻辑函数的化简"></a><strong>2.4 逻辑函数的化简</strong></h3><p>在数字系统中，实现某一逻辑功能的逻辑电路的复杂性与描述该功能的逻辑函数表达式的复杂性直接相关，一般来说，逻辑函数表达式越简单，设计出来的电路也就越简单。把逻辑函数简化成最简形式称为逻辑函数的最小化，有两种常用的方法，即<font color="red">代数化简法、卡诺图化简法。</font></p>
+<h4 id="2-4-1-代数化简法"><a href="#2-4-1-代数化简法" class="headerlink" title="2.4.1 代数化简法"></a><strong>2.4.1 代数化简法</strong></h4><p>代数化简法运用逻辑代数的公理、定理和规则对逻辑函数进行推导、变换而进行化简，没有固定的步骤可以遵循，主要取决于对公理、定理和规则的熟练掌握及灵活运用的程度。尽管如此，仍然可以总结出一些适用于大多数情况的方法吗，以便对逻辑函数进行变换，得到最简的函数表达式。有时很难判定结果是否为最简。</p>
+<h5 id="1-“与-或”表达式的化简"><a href="#1-“与-或”表达式的化简" class="headerlink" title="1. “与-或”表达式的化简"></a><strong>1. “与-或”表达式的化简</strong></h5><p>(1)表达式中“与项”的个数是多少</p>
+<p>(2)每个“与项”中的变量个数是多少</p>
+<p><img src="/article/1bd5d531/image-20211008004231531.png" alt="image-20211008004231531"></p>
+<p><img src="/article/1bd5d531/image-20211008004239661.png" alt="image-20211008004239661"></p>
+<p><img src="/article/1bd5d531/image-20211008004244912.png" alt="image-20211008004244912"></p>
+<h5 id="2-“或-与”表达式的化简"><a href="#2-“或-与”表达式的化简" class="headerlink" title="2. “或-与”表达式的化简"></a><strong>2. “或-与”表达式的化简</strong></h5><h4 id="2-4-2-卡诺图化简法"><a href="#2-4-2-卡诺图化简法" class="headerlink" title="2.4.2 卡诺图化简法"></a><strong>2.4.2 卡诺图化简法</strong></h4><h5 id="1-卡诺图的构成"><a href="#1-卡诺图的构成" class="headerlink" title="1. 卡诺图的构成"></a><strong>1. 卡诺图的构成</strong></h5><p>​        n个变量的卡诺图是一种由2<sup>n</sup>个方格构成的图形，每一个方格表示逻辑函数的一个最小项。所有的最小项巧妙地排列成一种能清楚地反映它们相邻<font color="red">(物理上和逻辑上相邻)</font>关系的方格阵列。</p>
+<p>​        因为任意一个逻辑函数都可表示成“最小项之和”(标准与或式)的形式，所以一个函数可用图形中若干方格构成的区域来表示。</p>
+<p><img src="/article/1bd5d531/image-20211010144135480.png" alt="image-20211010144135480"></p>
+<p><img src="/article/1bd5d531/image-20211010144234741.png" alt="image-20211010144234741"></p>
+<p><img src="/article/1bd5d531/image-20211010144427128.png" alt="image-20211010144427128"></p>
+<p>定义：彼此只有一个变量不同，且这个不同变量互为反变量的两个最小项(“与项”)称为<font color="red">相邻最小项</font></p>
+<p>11和10调换位置目的是：为了使小方格所有的最小项是相邻最小项。</p>
+<p><font color="red">几何相邻：左右、上下</font></p>
+<p><font color="red">相对相邻：每一行首尾、每一列首尾</font></p>
+<p>卡诺图在构造上具有以下两个特点：</p>
+<p>​        (1)n个变量的卡诺图由2<sup>n</sup>个小方格组成，每个小方格代表一个最小项。</p>
+<p>​        (2)卡诺图上处在相邻、相对位置的小方格所代表的最小项为相邻最小项。</p>
+<h5 id="2-逻辑函数在卡诺图上的表示"><a href="#2-逻辑函数在卡诺图上的表示" class="headerlink" title="2. 逻辑函数在卡诺图上的表示"></a><strong>2. 逻辑函数在卡诺图上的表示</strong></h5><p>(1)”最小项之和“式(标准“与-或”式)的卡诺图表示：将逻辑函数所对应的最小项在卡诺图的相应方格中标以1，剩余方格标以0。为叙述方便起见，把标以1的方格称为1方格，标以0的方格称为0方格。</p>
+<p><img src="/article/1bd5d531/image-20211010145252129.png" alt="image-20211010145252129"></p>
+<p><img src="/article/1bd5d531/image-20211010145301812.png" alt="image-20211010145301812"></p>
+<p>(2)一般“与或”式的卡诺图表示</p>
+<p>将表达式的“与项”或“<strong>最小项</strong>”所对应的方格标以1</p>
+<p><img src="/article/1bd5d531/image-20211010145442336.png" alt="image-20211010145442336"></p>
+<p>(3)其他形式函数的卡诺图表示：</p>
+<p>用代数法先转换成一般“与或”式，再在卡诺图上表示。</p>
+<p><strong>注：</strong>通过摩根定理(去掉公共非号)和结合律(去掉括弧)。</p>
+<h5 id="3-卡诺图上最小项的合并"><a href="#3-卡诺图上最小项的合并" class="headerlink" title="3. 卡诺图上最小项的合并"></a><strong>3. 卡诺图上最小项的合并</strong></h5><p>在卡诺图上把相邻最小项所对应的小格“圈”在一起可进行合并，以达到用一个简单“与项”代替若干最小项的目的。这样的“圈”称为“卡诺圈”。</p>
+<p>圈图原则：8,4,2,1</p>
+<p>相邻的关系：</p>
+<ul>
+<li><p>​    消去最小项的不同变量</p>
+</li>
+<li><p>​    得到与项共有相同变量</p>
+</li>
+</ul>
+<p><img src="/article/1bd5d531/image-20211010150400627.png" alt="image-20211010150400627"></p>
+<p><img src="/article/1bd5d531/image-20211010150406732.png" alt="image-20211010150406732"></p>
+<p><img src="/article/1bd5d531/image-20211010150414360.png" alt="image-20211010150414360"></p>
+<p><img src="/article/1bd5d531/image-20211010150448160.png" alt="image-20211010150448160"></p>
+<p><img src="/article/1bd5d531/image-20211010150454571.png" alt="image-20211010150454571"></p>
+<h5 id="4-用卡诺图化简逻辑函数"><a href="#4-用卡诺图化简逻辑函数" class="headerlink" title="4. 用卡诺图化简逻辑函数"></a><strong>4. 用卡诺图化简逻辑函数</strong></h5><p><strong>步骤：</strong></p>
+<p><img src="/article/1bd5d531/image-20211010150841189.png" alt="image-20211010150841189"></p>
+<p><strong>原则：</strong></p>
+<p>​    (1)任何2个相邻最小项，可以合并为一项，并消去一个变量。</p>
+<p>​    (2)任何4个相邻的最小项，可以合并为一项，并消去2个变量。</p>
+<p>​    (3)任何8个(2<sup>3</sup>个)相邻最小项，可以合并为一项，并消去3个变量。</p>
+<p><img src="/article/1bd5d531/image-20211010150717604.png" alt="image-20211010150717604"></p>
+<p><img src="/article/1bd5d531/image-20211010150731714.png" alt="image-20211010150731714"></p>
+<p><img src="/article/1bd5d531/image-20211010150905421.png" alt="image-20211010150905421"></p>
+<p><img src="/article/1bd5d531/image-20211010150911754.png" alt="image-20211010150911754"></p>
+<p><img src="/article/1bd5d531/image-20211010151110520.png" alt="image-20211010151110520"></p>
+<p><img src="/article/1bd5d531/image-20211010151120577.png" alt="image-20211010151120577"></p>
+<p><img src="/article/1bd5d531/image-20211010151126366.png" alt="image-20211010151126366"></p>
+<p><img src="/article/1bd5d531/image-20211010151157803.png" alt="image-20211010151157803"></p>
+<h4 id="2-4-3-逻辑函数化简中有关问题的考虑"><a href="#2-4-3-逻辑函数化简中有关问题的考虑" class="headerlink" title="2.4.3 逻辑函数化简中有关问题的考虑"></a><strong>2.4.3 逻辑函数化简中有关问题的考虑</strong></h4><p>无关最小项：</p>
+<p>​        一个逻辑函数，如果它的某些输入取值组合因受特殊原因制约而不会出现，或者虽然每种输入取值组合都可能出现，但此时函数取值为1还是0无关紧要，那么这些输入取值组合所对应的最小项称为无关最小项。</p>
+<p>​        无关最小项<font color="red">可当成1也可当成0，</font>并不影响函数的实际逻辑功能。</p>
+<p><img src="/article/1bd5d531/image-20211010151422554.png" alt="image-20211010151422554"></p>
+<p><img src="/article/1bd5d531/image-20211010151446432.png" alt="image-20211010151446432"></p>
+
+    </div>
+
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------(*^▽^*)感谢您的阅读，本文结束------</div>
+    
+</div>
+      
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0/" rel="tag"># 逻辑函数</a>
+              <a href="/tags/%E9%80%BB%E8%BE%91%E5%8F%98%E9%87%8F/" rel="tag"># 逻辑变量</a>
+              <a href="/tags/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/" rel="tag"># 逻辑运算</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/article/e6e9fb99.html" rel="prev" title="模块1-3:基本网络连接和通信考试">
+      <i class="fa fa-chevron-left"></i> 模块1-3:基本网络连接和通信考试
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/article/aa46461a.html" rel="next" title="Maven工具">
+      Maven工具 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="SOHUCS"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">2.1 逻辑代数的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-%E9%80%BB%E8%BE%91%E5%8F%98%E9%87%8F"><span class="nav-text">2.1.1 逻辑变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="nav-text">2.1.2 逻辑运算</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E2%80%9D%E6%88%96%E2%80%9C%E8%BF%90%E7%AE%97"><span class="nav-text">1. ”或“运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E2%80%9D%E4%B8%8E%E2%80%9C%E8%BF%90%E7%AE%97"><span class="nav-text">2. ”与“运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E2%80%9D%E9%9D%9E%E2%80%9C%E8%BF%90%E7%AE%97"><span class="nav-text">3. ”非“运算</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0"><span class="nav-text">2.1.3 逻辑函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">1. 逻辑函数的定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E7%9B%B8%E7%AD%89"><span class="nav-text">2. 逻辑函数的相等</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E7%9A%84%E5%85%AC%E7%90%86%E3%80%81%E5%AE%9A%E7%90%86%E5%8F%8A%E8%A7%84%E5%88%99"><span class="nav-text">2.2 逻辑代数的公理、定理及规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E7%9A%84%E5%85%AC%E7%90%86%E5%92%8C%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-text">2.2.1 逻辑代数的公理和基本定理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%85%AC%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-text">1. 公理系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-text">2. 基本定理</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E7%9A%84%E9%87%8D%E8%A6%81%E8%A7%84%E5%88%99"><span class="nav-text">2.2.2 逻辑代数的重要规则</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E4%BB%A3%E5%85%A5%E8%A7%84%E5%88%99"><span class="nav-text">1. 代入规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%8F%8D%E6%BC%94%E8%A7%84%E5%88%99"><span class="nav-text">2. 反演规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%AF%B9%E5%81%B6%E8%A7%84%E5%88%99"><span class="nav-text">2. 对偶规则</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%BD%A2%E5%BC%8F%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="nav-text">2.3 逻辑函数表达式的形式与转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%B3%95"><span class="nav-text">2.3.1 逻辑函数的表示法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-text">1. 逻辑表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E7%9C%9F%E5%80%BC%E8%A1%A8"><span class="nav-text">2. 真值表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%8D%A1%E8%AF%BA%E5%9B%BE"><span class="nav-text">3. 卡诺图</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F"><span class="nav-text">2.3.2 逻辑函数表达式的基本形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="nav-text">2.3.3 逻辑函数表达式的标准形式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9C%80%E5%B0%8F%E9%A1%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-text">1. 最小项表达式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%9C%80%E5%B0%8F%E9%A1%B9%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">2. 最小项的性质</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%9C%80%E5%A4%A7%E9%A1%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E4%B8%8D%E5%81%9A%E8%A6%81%E6%B1%82"><span class="nav-text">3. 最大项表达式(不做要求)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="nav-text">2.3.4 逻辑函数表达式的转换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E4%BB%A3%E6%95%B0%E8%BD%AC%E6%8D%A2%E6%B3%95"><span class="nav-text">1. 代数转换法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E7%9C%9F%E5%80%BC%E8%A1%A8%E8%BD%AC%E6%8D%A2%E6%B3%95"><span class="nav-text">2. 真值表转换法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%8D%A1%E8%AF%BA%E5%9B%BE%E8%BD%AC%E6%8D%A2%E6%B3%95"><span class="nav-text">3. 卡诺图转换法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%96%E7%AE%80"><span class="nav-text">2.4 逻辑函数的化简</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-%E4%BB%A3%E6%95%B0%E5%8C%96%E7%AE%80%E6%B3%95"><span class="nav-text">2.4.1 代数化简法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E2%80%9C%E4%B8%8E-%E6%88%96%E2%80%9D%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%8C%96%E7%AE%80"><span class="nav-text">1. “与-或”表达式的化简</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E2%80%9C%E6%88%96-%E4%B8%8E%E2%80%9D%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%8C%96%E7%AE%80"><span class="nav-text">2. “或-与”表达式的化简</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2-%E5%8D%A1%E8%AF%BA%E5%9B%BE%E5%8C%96%E7%AE%80%E6%B3%95"><span class="nav-text">2.4.2 卡诺图化简法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%8D%A1%E8%AF%BA%E5%9B%BE%E7%9A%84%E6%9E%84%E6%88%90"><span class="nav-text">1. 卡诺图的构成</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E5%9C%A8%E5%8D%A1%E8%AF%BA%E5%9B%BE%E4%B8%8A%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="nav-text">2. 逻辑函数在卡诺图上的表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%8D%A1%E8%AF%BA%E5%9B%BE%E4%B8%8A%E6%9C%80%E5%B0%8F%E9%A1%B9%E7%9A%84%E5%90%88%E5%B9%B6"><span class="nav-text">3. 卡诺图上最小项的合并</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E7%94%A8%E5%8D%A1%E8%AF%BA%E5%9B%BE%E5%8C%96%E7%AE%80%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0"><span class="nav-text">4. 用卡诺图化简逻辑函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-3-%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E5%8C%96%E7%AE%80%E4%B8%AD%E6%9C%89%E5%85%B3%E9%97%AE%E9%A2%98%E7%9A%84%E8%80%83%E8%99%91"><span class="nav-text">2.4.3 逻辑函数化简中有关问题的考虑</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chen Xi"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">Chen Xi</p>
+  <div class="site-description" itemprop="description">学无止境，仍需努力！</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/johnsonanna" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;johnsonanna" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2628589218@qq.com" title="E-Mail → mailto:2628589218@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://translate.google.cn/" title="https:&#x2F;&#x2F;translate.google.cn&#x2F;" rel="noopener" target="_blank">谷歌翻译</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://hexo.io/zh-cn/" title="https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;" rel="noopener" target="_blank">hexo博客官网</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+<div id="music163player">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28864473&auto=1&height=66">
+    </iframe>
+</div>
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chen Xi</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">14k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">13 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  Better late than never.
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("10/04/2021 12:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  <script>
+  NexT.utils.loadComments(document.querySelector('#SOHUCS'), () => {
+    var appid = 'cyvGRaP7J';
+    var conf = '583411034b02197f91131783885da29f';
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+    } else {
+      var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})});
+    }
+  });
+  </script>
+  <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+    <script src="/live2d-widget/autoload.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
