@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JavaSE零基础讲义指南</title>
+    <url>/article/ddd875c0.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="第一章-Java开发环境搭建"><a href="#第一章-Java开发环境搭建" class="headerlink" title="第一章 Java开发环境搭建"></a>第一章 Java开发环境搭建</h1><hr>
+<h2 id="1-1-章节目标与知识框架"><a href="#1-1-章节目标与知识框架" class="headerlink" title="1.1 章节目标与知识框架"></a>1.1 章节目标与知识框架</h2><hr>
+<h3 id="1-1-1-章节目标"><a href="#1-1-1-章节目标" class="headerlink" title="1.1.1 章节目标"></a>1.1.1 章节目标</h3><hr>
+<p>掌握Java的开发环境搭建，会编写HelloWorld程序，并能够准确的进行编译和运行；理解path和classpath环境变量并可以自行配置。</p>
+<h3 id="1-1-2-知识框架"><a href="#1-1-2-知识框架" class="headerlink" title="1.1.2 知识框架"></a>1.1.2 知识框架</h3><hr>
+<p><img src="/article/ddd875c0/image-20211019225608244.png" alt="image-20211019225608244"></p>
+<h2 id="1-12-章节小结"><a href="#1-12-章节小结" class="headerlink" title="1.12 章节小结"></a>1.12 章节小结</h2><hr>
+<p>本章节的主要内容是带领大家搭建Java的开发环境，编写第一个Java程序。在这个过程当中经历了JDK的安装，环境变量path和classpath的配置，Java程序的编写、编译和运行。其中重点是需要大家理解path和classpath环境变量的作用以及如何配置。另外能够顺利的默写HelloWorld(不参考任何代码)。能够给HelloWorld程序提供简单的注释信息。</p>
+<h1 id="第二章-标识符与关键字"><a href="#第二章-标识符与关键字" class="headerlink" title="第二章 标识符与关键字"></a>第二章 标识符与关键字</h1><hr>
+<h2 id="2-1-章节目标与知识框架"><a href="#2-1-章节目标与知识框架" class="headerlink" title="2.1 章节目标与知识框架"></a>2.1 章节目标与知识框架</h2><hr>
+<h3 id="2-1-1-章节目标"><a href="#2-1-1-章节目标" class="headerlink" title="2.1.1 章节目标"></a>2.1.1 章节目标</h3><hr>
+<p>了解构成java源程序的标识符和关键字都是什么，掌握标识符的命名规则以及规范。能够识别标识符是否合法。</p>
+<h3 id="2-1-2-知识框架"><a href="#2-1-2-知识框架" class="headerlink" title="2.1.2 知识框架"></a>2.1.2 知识框架</h3><hr>
+<p><img src="/article/ddd875c0/image-20211019234308929.png" alt="image-20211019234308929"></p>
+<h2 id="2-5-章节小结"><a href="#2-5-章节小结" class="headerlink" title="2.5 章节小结"></a>2.5 章节小结</h2><hr>
+<p>本章节主要是带领大家一起来看看Java程序的重要组成部分：标识符和关键字。其中标识符中重点掌握标识符的命名规则，以及命名规范，养成一个良好的编程规范，能够大大提高程序的可读性。另外，还有当给出相关的标识符，能够很快的判断其合法性。关键字这块重点要知道Java中的每一个关键字全部都是小写的英文单词，每个关键字都有特殊意义，并且不能拿关键字作为标识符。至于每个关键字所代表的含义，以及这个关键字如何编写，建议随着课程一边学习一边练习，然后一边再记忆。</p>
+<h1 id="第三章-变量"><a href="#第三章-变量" class="headerlink" title="第三章 变量"></a>第三章 变量</h1><hr>
+<h2 id="3-1-章节目标与知识框架"><a href="#3-1-章节目标与知识框架" class="headerlink" title="3.1 章节目标与知识框架"></a>3.1 章节目标与知识框架</h2><hr>
+<h3 id="3-1-1-章节目标"><a href="#3-1-1-章节目标" class="headerlink" title="3.1.1 章节目标"></a>3.1.1 章节目标</h3><hr>
+<p>理解变量本质是什么，在开发中有什么用？变量三要素是什么？怎么声明变量？怎么给变量赋值？变量是如何分类的？变量的作用域？</p>
+<h3 id="3-1-2-知识框架"><a href="#3-1-2-知识框架" class="headerlink" title="3.1.2 知识框架"></a>3.1.2 知识框架</h3><hr>
+<p><img src="/article/ddd875c0/image-20211020001019500.png" alt="image-20211020001019500"></p>
+<h2 id="3-4-章节小结"><a href="#3-4-章节小结" class="headerlink" title="3.4 章节小结"></a>3.4 章节小结</h2><hr>
+<p>通过本章内容的学习，大家需要掌握变量应该如何声明，如何赋值，如何使用。需要理解变量就是内存当中存储数据的一块空间，它包括三要素：数据类型、变量名、值。另外要知道变量根据声明的位置可以分为成员变量和局部变量，并且声明位置不同作用域也是不同的。还需要注意在同一个域当中变量名不能重名，不同的域，变量名可以相同，只不过Java遵循就近原则，会自动访问离它最近的数据。</p>
+<h1 id="第四章-数据类型"><a href="#第四章-数据类型" class="headerlink" title="第四章 数据类型"></a>第四章 数据类型</h1><hr>
+<h2 id="4-1-章节目标与知识框架"><a href="#4-1-章节目标与知识框架" class="headerlink" title="4.1 章节目标与知识框架"></a>4.1 章节目标与知识框架</h2><hr>
+<h3 id="4-1-1-章节目标"><a href="#4-1-1-章节目标" class="headerlink" title="4.1.1 章节目标"></a>4.1.1 章节目标</h3><hr>
+<p>本章节的目标是要求大家理解数据类型的作用，八种基本数据类型各是什么，常见数据类型的取值范围，怎么使用它们声明变量，各数据类型使用时的注意事项，另外要知道在实际开发中怎么选择合适的数据类型，还有这八种基本数据类型之间的相互转换。</p>
+<h3 id="4-1-2-知识框架"><a href="#4-1-2-知识框架" class="headerlink" title="4.1.2 知识框架"></a>4.1.2 知识框架</h3><hr>
+<p><img src="/article/ddd875c0/image-20211020003502105.png" alt="image-20211020003502105"></p>
+<h2 id="4-6-章节小结"><a href="#4-6-章节小结" class="headerlink" title="4.6 章节小结"></a>4.6 章节小结</h2><hr>
+<p>通过本章节内容的学习，需要理解数据类型在程序中的作用，需要掌握在Java语言中数据类型包括哪些，其中基本数据类型又包括哪些，每个基本数据类型所占用的字节数量，byte类型取值范围等。另外需要理解字符编码在程序中的作用。还有每一种数据类型特有的语法机制，包括整数型字面值默认当做int类型处理，如果以long形式表示，需要在字面值后添加L或l；浮点型字面量默认被当做double处理，后面添加F/f才可以被当做float类型；而布尔型在Java中只有true和false没有其他值；字符型变量完全可以存储1个汉字等。除了以上描述之外，还有相对来说难度较大的类型之间的相互转换，这个就需要大家记住相应的转换规则了。</p>
+<h1 id="第五章-运算符"><a href="#第五章-运算符" class="headerlink" title="第五章 运算符"></a>第五章 运算符</h1><hr>
+<h2 id="5-1-章节目标与知识框架"><a href="#5-1-章节目标与知识框架" class="headerlink" title="5.1 章节目标与知识框架"></a>5.1 章节目标与知识框架</h2><hr>
+<h3 id="5-1-1-章节目标"><a href="#5-1-1-章节目标" class="headerlink" title="5.1.1 章节目标"></a>5.1.1 章节目标</h3><hr>
+<p>掌握常见的Java运算符的使用，包括算术运算符、关系运算符、逻辑运算符、赋值运算符、条件运算符、字符串连接运算符。</p>
+<h3 id="5-1-2-知识框架"><a href="#5-1-2-知识框架" class="headerlink" title="5.1.2 知识框架"></a>5.1.2 知识框架</h3><hr>
+<p><img src="/article/ddd875c0/image-20211021001849002.png" alt="image-20211021001849002"></p>
+<h2 id="5-4-章节小结"><a href="#5-4-章节小结" class="headerlink" title="5.4 章节小结"></a>5.4 章节小结</h2><hr>
+<p>本章节内容需要大家掌握开发中常用运算符的使用，包括算术运算符、关系运算符、逻辑运算符、赋值运算符、条件运算符、字符串连接运算符。实际上除了以上所进运算符之外，还有其他运算符，比如位运算符、instanceof、new等运算符，在当下使用较大，后期用到的时候再进行学习。</p>
+<h1 id="第十章-封装"><a href="#第十章-封装" class="headerlink" title="第十章 封装"></a>第十章 封装</h1><hr>
+<h2 id="10-1-章节目标与知识框架"><a href="#10-1-章节目标与知识框架" class="headerlink" title="10.1 章节目标与知识框架"></a>10.1 章节目标与知识框架</h2><hr>
+<h3 id="10-1-1-章节目标"><a href="#10-1-1-章节目标" class="headerlink" title="10.1.1 章节目标"></a>10.1.1 章节目标</h3><hr>
+<p>理解为什么要进行封装？封装有什么好处？封装的代码怎么实现？</p>
+<h3 id="10-1-2-知识框架"><a href="#10-1-2-知识框架" class="headerlink" title="10.1.2 知识框架"></a>10.1.2 知识框架</h3><hr>
+<p><img src="/article/ddd875c0/image-20211021002710066.png" alt="image-20211021002710066"></p>
+<h2 id="10-3-章节小结"><a href="#10-3-章节小结" class="headerlink" title="10.3 章节小结"></a>10.3 章节小结</h2><hr>
+<p>通过本章节内容的学习，需要理解为什么要封装，封装有什么好处，以及掌握封装的代码应该如何编写。</p>
+]]></content>
+      <categories>
+        <category>-Java</category>
+      </categories>
+      <tags>
+        <tag>Java零基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Maven工具</title>
     <url>/article/aa46461a.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
@@ -9,21 +68,6 @@
       </categories>
       <tags>
         <tag>项目构建工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/article/d87f7e0c.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>public class HelloWorld{</p>
-<pre><code>public static void main(String [] args)&#123;
-
-    System.out.println(&quot;HelloWorld&quot;);
-&#125;
-</code></pre>
-<p>}</p>
-]]></content>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -43,6 +87,21 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/article/d87f7e0c.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>public class HelloWorld{</p>
+<pre><code>public static void main(String [] args)&#123;
+
+    System.out.println(&quot;HelloWorld&quot;);
+&#125;
+</code></pre>
+<p>}</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
   </entry>
   <entry>
     <title>wo</title>
@@ -74,6 +133,12 @@
       </tags>
   </entry>
   <entry>
+    <title>我的第一个程序</title>
+    <url>/article/fff99807.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这是我的第一篇文章测试</p>
+]]></content>
+  </entry>
+  <entry>
     <title>图片发布测试</title>
     <url>/article/cdfeb7a5.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="/article/cdfeb7a5/header.jpg" alt="博主头像"></p>
@@ -81,12 +146,6 @@
       <tags>
         <tag>image</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我的第一个程序</title>
-    <url>/article/fff99807.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>这是我的第一篇文章测试</p>
-]]></content>
   </entry>
   <entry>
     <title>模块1-3:基本网络连接和通信考试</title>
@@ -184,10 +243,425 @@
       </tags>
   </entry>
   <entry>
+    <title>第三章、组合逻辑电路</title>
+    <url>/article/98aecef.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>数字系统的逻辑电路可分为两类，一类为组合逻辑电路，另一类为时序逻辑电路。</p>
+<p>所谓组合逻辑电路，是指电路在任何时刻产生的稳定输出值仅仅取决于该时刻各输入值的组合，而与过去的输入值无关。</p>
+<p>组合逻辑电路需要讨论的两个基本问题是分析与设计。</p>
+<span id="more"></span>
+
+<h3 id="3-1-逻辑门电路"><a href="#3-1-逻辑门电路" class="headerlink" title="3.1 逻辑门电路"></a><strong>3.1 逻辑门电路</strong></h3><h4 id="3-1-1-简单逻辑门电路"><a href="#3-1-1-简单逻辑门电路" class="headerlink" title="3.1.1 简单逻辑门电路"></a><strong>3.1.1 简单逻辑门电路</strong></h4><p>用来实现“与”、“或”、“非”3种基本逻辑运算的逻辑电路分别为“与”门、“或”门和“非”门，这是3种最基本的逻辑门电路。</p>
+<p><img src="/article/98aecef/image-20211017095426623.png" alt="image-20211017095426623"></p>
+<h5 id="1-“与”门"><a href="#1-“与”门" class="headerlink" title="1.  “与”门"></a><strong>1.  “与”门</strong></h5><p>用来实现“与”逻辑功能的电路称为“与”门。有两个或两个以上的输入端、一个输出端。其中，A、B为输入端，F为输出端</p>
+<p><img src="/article/98aecef/image-20211017095517353.png" alt="image-20211017095517353"></p>
+<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
+<p><img src="/article/98aecef/image-20211017095647844.png" alt="image-20211017095647844"></p>
+<center><b>“与”门真值表</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+</tbody></table>
+<h5 id="2-“或”门"><a href="#2-“或”门" class="headerlink" title="2. “或”门"></a><strong>2. “或”门</strong></h5><p>实现“或”逻辑功能的电路称为“或”门。有两个或两个以上的输入端、一个输出端。其中，A、B为输入端，F为输出端。</p>
+<p><img src="/article/98aecef/image-20211017095841219.png" alt="image-20211017095841219"></p>
+<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
+<p><img src="/article/98aecef/image-20211017095936596.png" alt="image-20211017095936596"></p>
+<center><b>“或”门真值表</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+</tbody></table>
+<h5 id="3-“非”门"><a href="#3-“非”门" class="headerlink" title="3. “非”门"></a><strong>3. “非”门</strong></h5><p>实现“非”逻辑功能的电路称为“非”门，有时又称反门或者反相器。只有一个输入端，一个输出端。其中，A为输入端，F为输出端。</p>
+<p><img src="/article/98aecef/image-20211017100209676.png" alt="image-20211017100209676"></p>
+<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
+<p><img src="/article/98aecef/image-20211017100223401.png" alt="image-20211017100223401"></p>
+<center><b>“非”门真值表</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+</tbody></table>
+<h4 id="3-1-2-复合逻辑门电路"><a href="#3-1-2-复合逻辑门电路" class="headerlink" title="3.1.2 复合逻辑门电路"></a>3.1.2 复合逻辑门电路</h4><h5 id="定义："><a href="#定义：" class="headerlink" title="定义："></a><strong>定义：</strong></h5><p>复合门在逻辑功能上是简单逻辑门的组合，实际性能上有所提高。常用的复合门有“与非”门，“或非”门、“与或非”门和“异或”门等。</p>
+<h5 id="1-”与非”门"><a href="#1-”与非”门" class="headerlink" title="1.”与非”门"></a><strong>1.”与非”门</strong></h5><p>“与”和“非”的复合运算称为“与非”运算，使用“与非”门可以实现“与”、“或”、“非”3种基本运算、并可构成任何逻辑电路，故称为通用逻辑门。实现“与非”逻辑功能的门电路称为“与非”门。</p>
+<p>“与非”门有两个以上输入端和一个输出端。其中A、B为输入端、F为输出端。</p>
+<p><img src="/article/98aecef/image-20211017101333379.png" alt="image-20211017101333379"></p>
+<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
+<p><img src="/article/98aecef/image-20211017102011378.png" alt="image-20211017102011378"></p>
+<center><b>“与非”门真值表</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p>“与非”运算的逻辑关系是，只要输入一个变量中有一个为0，输出函数值便为1，仅当全部输入变量的值均为1，输出函数值才为0。</p>
+<h5 id="2-”或非”门"><a href="#2-”或非”门" class="headerlink" title="2.”或非”门"></a><strong>2.”或非”门</strong></h5><p>“或”和“非”的复合运算称为“或非”运算，“或非”门也是一种通用门。实现“或非”逻辑的门电路称为“或非”门。</p>
+<p>它有两个以上输入端和一个输出端。其中，A、B为输入端，F为输出端。</p>
+<p><img src="/article/98aecef/image-20211017101953444.png" alt="image-20211017101953444"></p>
+<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
+<p><img src="/article/98aecef/image-20211017102033526.png" alt="image-20211017102033526"></p>
+<center><b>“或非”门真值表</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p>“或非”运算的逻辑关系时：只要有一个输入变量为1，输出函数值就为0；仅当全部输入变量都为0时，输出函数值才为1。</p>
+<h5 id="3-”与或非”门"><a href="#3-”与或非”门" class="headerlink" title="3. ”与或非”门"></a><strong>3. ”与或非”门</strong></h5><p>“与”、“或”、“非”3种运算的复合运算称为“与或非”运算。实现“与或非”逻辑功能的门电路称为“与或非”门。其中A、B、C、D为输入端，F为输出端。</p>
+<p><img src="/article/98aecef/image-20211017102833700.png" alt="image-20211017102833700"></p>
+<p><strong>输出端F和输入A、B、C、D之间的逻辑关系满足如下表达式：</strong></p>
+<p><img src="/article/98aecef/image-20211017102849929.png" alt="image-20211017102849929"></p>
+<center><b>“与或非”门真值表</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">C</th>
+<th align="center">D</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+</tbody></table>
+<h5 id="4-“异或”门"><a href="#4-“异或”门" class="headerlink" title="4. “异或”门"></a><strong>4. “异或”门</strong></h5><p>“异或”逻辑也是一种广泛应用的复合逻辑，“异或”运算的逻辑关系可写成如下表达式：</p>
+<p><img src="/article/98aecef/image-20211017103852843.png" alt="image-20211017103852843"></p>
+<p>“异或”逻辑表达式的含义是：当A、B取值相异时，F的值为1；当A、B取值相同时，F的值为0。</p>
+<p>也就是说，<font color="red">当两个输入变量不一致时，函数值为1；而当两个输入变量相同时，函数值为0。</font>因此“异或”逻辑表达式又可写成如下形式</p>
+<p><img src="/article/98aecef/image-20211017104003743.png" alt="image-20211017104003743"></p>
+<p>实现“异或”运算的门电路称为“异或”门。该门电路有两个输入端和一个输出端。其中，A、B为输入端，F为输出端。</p>
+<p><img src="/article/98aecef/image-20211017104135446.png" alt="image-20211017104135446"></p>
+<center><b>“异或”门真值表</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p>与“异或”运算相反，还有另外一个复合运算称为“同或”运算。其逻辑关系可写成如下形式：</p>
+<p><img src="/article/98aecef/image-20211017105237533.png" alt="image-20211017105237533"></p>
+<p>“同或”运算逻辑表达式的含义是：<font color="red">当A、B取值相同时，F的值为1；当A、B取值相异时，F的值为0。</font>换句话说，当两个变量取值相同时，函数值为1；而当两个变量不同时，函数值为0。因此，“同或”逻辑关系又可写成如下形式：</p>
+<p><img src="/article/98aecef/image-20211017105458176.png" alt="image-20211017105458176"></p>
+<p>不难看出，“同或”逻辑和“异或”逻辑是互补的，即</p>
+<p><img src="/article/98aecef/image-20211017105536315.png" alt="image-20211017105536315"></p>
+<p>异或是同或的非，同或是异或的非。</p>
+<center><b>“同或”运算真值表</b></center>
+
+<table>
+<thead>
+<tr>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">F</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>0</strong></td>
+<td align="center"><strong>0</strong></td>
+</tr>
+<tr>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+<td align="center"><strong>1</strong></td>
+</tr>
+</tbody></table>
+<h3 id="3-2-逻辑函数的实现"><a href="#3-2-逻辑函数的实现" class="headerlink" title="3.2 逻辑函数的实现"></a><strong>3.2 逻辑函数的实现</strong></h3><p>函数的表现形式和实际的逻辑电路之间有着对应的关系，而实际逻辑电路大量使用“与非”门、“或非”门、“与或非”门等。</p>
+<p>”与“、”或“、”非“运算时逻辑代数的基本运算。通过这些基本运算，逻辑函数可以表示成许多种不同的形式，通常遇到的有以下几种：“与-或”表达式，“或-与”表达式；“与非-与非”表达式，“或非-或非”表达式，“与-或-非”表达式。</p>
+<h4 id="3-2-1-用“与非”门实现逻辑函数"><a href="#3-2-1-用“与非”门实现逻辑函数" class="headerlink" title="3.2.1 用“与非”门实现逻辑函数"></a><strong>3.2.1 用“与非”门实现逻辑函数</strong></h4><p>第一步 求出函数的最简“与-或”式(卡诺图圈1)</p>
+<p>第二步 将其变换成“与非-与非”式(两次取反)</p>
+<p>第三步 画出与函数表达式对应的逻辑电路图</p>
+<p><img src="/article/98aecef/image-20211017174947184.png" alt="image-20211017174947184"></p>
+<p><img src="/article/98aecef/image-20211017174957694.png" alt="image-20211017174957694"></p>
+<h3 id="3-3-组合逻辑电路的分析"><a href="#3-3-组合逻辑电路的分析" class="headerlink" title="3.3 组合逻辑电路的分析"></a><strong>3.3 组合逻辑电路的分析</strong></h3><p>分析的任务：</p>
+<p>根据给定的组合电路，写出逻辑函数表达式，并以此来描述它的逻辑功能，确定输入与输出的关系，必要时对其设计的合理性进行评定。</p>
+<p>分析的一般步骤：</p>
+<p>第一步；写出给定组合电路的逻辑函数表达式；</p>
+<p>第二步：化简逻辑函数表达式；(不一定化到最简)</p>
+<p>第三步：根据化简的结果列出真值表；</p>
+<p>第四步：功能评述。</p>
+<p><img src="/article/98aecef/image-20211017110838258.png" alt="image-20211017110838258"></p>
+<p><img src="/article/98aecef/image-20211017110846149.png" alt="image-20211017110846149"></p>
+<p><img src="/article/98aecef/image-20211017110854833.png" alt="image-20211017110854833"></p>
+<p><img src="/article/98aecef/image-20211017110900326.png" alt="image-20211017110900326"></p>
+<p><img src="/article/98aecef/image-20211017110910913.png" alt="image-20211017110910913"></p>
+<p><img src="/article/98aecef/image-20211017110919790.png" alt="image-20211017110919790"></p>
+<p><img src="/article/98aecef/image-20211017110927526.png" alt="image-20211017110927526"></p>
+<p><img src="/article/98aecef/image-20211017110936346.png" alt="image-20211017110936346"></p>
+<p><img src="/article/98aecef/image-20211017110943552.png" alt="image-20211017110943552"></p>
+]]></content>
+      <categories>
+        <category>-数字逻辑</category>
+      </categories>
+      <tags>
+        <tag>简单逻辑门电路</tag>
+        <tag>复合逻辑门电路</tag>
+        <tag>逻辑函数电路分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一章、数制与编码</title>
     <url>/article/a5e0611c.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="1-1-进位计数制"><a href="#1-1-进位计数制" class="headerlink" title="1.1 进位计数制"></a><strong>1.1 进位计数制</strong></h3><h4 id="1-1-0-基本概念"><a href="#1-1-0-基本概念" class="headerlink" title="1.1.0 基本概念"></a><strong>1.1.0 基本概念</strong></h4><p>1、用一组统一的符号和规则表示数的方法，称为进位计数制，简称<font color="red">数制</font>。</p>
-<p>​      如：二进制、八进制、十进制。</p>
+<p>​      如：二进制、八进制、十进制、十六进制。</p>
 <p>2、计数法</p>
 <ul>
 <li>位置计数法 例：123.45 读作 一百二十三点四五</li>
@@ -639,421 +1113,6 @@
         <tag>补码</tag>
         <tag>原码</tag>
         <tag>余3码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第三章、组合逻辑电路</title>
-    <url>/article/98aecef.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>数字系统的逻辑电路可分为两类，一类为组合逻辑电路，另一类为时序逻辑电路。</p>
-<p>所谓组合逻辑电路，是指电路在任何时刻产生的稳定输出值仅仅取决于该时刻各输入值的组合，而与过去的输入值无关。</p>
-<p>组合逻辑电路需要讨论的两个基本问题是分析与设计。</p>
-<span id="more"></span>
-
-<h3 id="3-1-逻辑门电路"><a href="#3-1-逻辑门电路" class="headerlink" title="3.1 逻辑门电路"></a><strong>3.1 逻辑门电路</strong></h3><h4 id="3-1-1-简单逻辑门电路"><a href="#3-1-1-简单逻辑门电路" class="headerlink" title="3.1.1 简单逻辑门电路"></a><strong>3.1.1 简单逻辑门电路</strong></h4><p>用来实现“与”、“或”、“非”3种基本逻辑运算的逻辑电路分别为“与”门、“或”门和“非”门，这是3种最基本的逻辑门电路。</p>
-<p><img src="/article/98aecef/image-20211017095426623.png" alt="image-20211017095426623"></p>
-<h5 id="1-“与”门"><a href="#1-“与”门" class="headerlink" title="1.  “与”门"></a><strong>1.  “与”门</strong></h5><p>用来实现“与”逻辑功能的电路称为“与”门。有两个或两个以上的输入端、一个输出端。其中，A、B为输入端，F为输出端</p>
-<p><img src="/article/98aecef/image-20211017095517353.png" alt="image-20211017095517353"></p>
-<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
-<p><img src="/article/98aecef/image-20211017095647844.png" alt="image-20211017095647844"></p>
-<center><b>“与”门真值表</b></center>
-
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-</tbody></table>
-<h5 id="2-“或”门"><a href="#2-“或”门" class="headerlink" title="2. “或”门"></a><strong>2. “或”门</strong></h5><p>实现“或”逻辑功能的电路称为“或”门。有两个或两个以上的输入端、一个输出端。其中，A、B为输入端，F为输出端。</p>
-<p><img src="/article/98aecef/image-20211017095841219.png" alt="image-20211017095841219"></p>
-<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
-<p><img src="/article/98aecef/image-20211017095936596.png" alt="image-20211017095936596"></p>
-<center><b>“或”门真值表</b></center>
-
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-</tbody></table>
-<h5 id="3-“非”门"><a href="#3-“非”门" class="headerlink" title="3. “非”门"></a><strong>3. “非”门</strong></h5><p>实现“非”逻辑功能的电路称为“非”门，有时又称反门或者反相器。只有一个输入端，一个输出端。其中，A为输入端，F为输出端。</p>
-<p><img src="/article/98aecef/image-20211017100209676.png" alt="image-20211017100209676"></p>
-<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
-<p><img src="/article/98aecef/image-20211017100223401.png" alt="image-20211017100223401"></p>
-<center><b>“非”门真值表</b></center>
-
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-</tbody></table>
-<h4 id="3-1-2-复合逻辑门电路"><a href="#3-1-2-复合逻辑门电路" class="headerlink" title="3.1.2 复合逻辑门电路"></a>3.1.2 复合逻辑门电路</h4><h5 id="定义："><a href="#定义：" class="headerlink" title="定义："></a><strong>定义：</strong></h5><p>复合门在逻辑功能上是简单逻辑门的组合，实际性能上有所提高。常用的复合门有“与非”门，“或非”门、“与或非”门和“异或”门等。</p>
-<h5 id="1-”与非”门"><a href="#1-”与非”门" class="headerlink" title="1.”与非”门"></a><strong>1.”与非”门</strong></h5><p>“与”和“非”的复合运算称为“与非”运算，使用“与非”门可以实现“与”、“或”、“非”3种基本运算、并可构成任何逻辑电路，故称为通用逻辑门。实现“与非”逻辑功能的门电路称为“与非”门。</p>
-<p>“与非”门有两个以上输入端和一个输出端。其中A、B为输入端、F为输出端。</p>
-<p><img src="/article/98aecef/image-20211017101333379.png" alt="image-20211017101333379"></p>
-<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
-<p><img src="/article/98aecef/image-20211017102011378.png" alt="image-20211017102011378"></p>
-<center><b>“与非”门真值表</b></center>
-
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-</tbody></table>
-<p>“与非”运算的逻辑关系是，只要输入一个变量中有一个为0，输出函数值便为1，仅当全部输入变量的值均为1，输出函数值才为0。</p>
-<h5 id="2-”或非”门"><a href="#2-”或非”门" class="headerlink" title="2.”或非”门"></a><strong>2.”或非”门</strong></h5><p>“或”和“非”的复合运算称为“或非”运算，“或非”门也是一种通用门。实现“或非”逻辑的门电路称为“或非”门。</p>
-<p>它有两个以上输入端和一个输出端。其中，A、B为输入端，F为输出端。</p>
-<p><img src="/article/98aecef/image-20211017101953444.png" alt="image-20211017101953444"></p>
-<p><strong>输出端F和输入A、B之间的逻辑关系满足如下表达式：</strong></p>
-<p><img src="/article/98aecef/image-20211017102033526.png" alt="image-20211017102033526"></p>
-<center><b>“或非”门真值表</b></center>
-
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-</tbody></table>
-<p>“或非”运算的逻辑关系时：只要有一个输入变量为1，输出函数值就为0；仅当全部输入变量都为0时，输出函数值才为1。</p>
-<h5 id="3-”与或非”门"><a href="#3-”与或非”门" class="headerlink" title="3. ”与或非”门"></a><strong>3. ”与或非”门</strong></h5><p>“与”、“或”、“非”3种运算的复合运算称为“与或非”运算。实现“与或非”逻辑功能的门电路称为“与或非”门。其中A、B、C、D为输入端，F为输出端。</p>
-<p><img src="/article/98aecef/image-20211017102833700.png" alt="image-20211017102833700"></p>
-<p><strong>输出端F和输入A、B、C、D之间的逻辑关系满足如下表达式：</strong></p>
-<p><img src="/article/98aecef/image-20211017102849929.png" alt="image-20211017102849929"></p>
-<center><b>“与或非”门真值表</b></center>
-
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">C</th>
-<th align="center">D</th>
-<th align="center">F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-</tbody></table>
-<h5 id="4-“异或”门"><a href="#4-“异或”门" class="headerlink" title="4. “异或”门"></a><strong>4. “异或”门</strong></h5><p>“异或”逻辑也是一种广泛应用的复合逻辑，“异或”运算的逻辑关系可写成如下表达式：</p>
-<p><img src="/article/98aecef/image-20211017103852843.png" alt="image-20211017103852843"></p>
-<p>“异或”逻辑表达式的含义是：当A、B取值相异时，F的值为1；当A、B取值相同时，F的值为0。</p>
-<p>也就是说，<font color="red">当两个输入变量不一致时，函数值为1；而当两个输入变量相同时，函数值为0。</font>因此“异或”逻辑表达式又可写成如下形式</p>
-<p><img src="/article/98aecef/image-20211017104003743.png" alt="image-20211017104003743"></p>
-<p>实现“异或”运算的门电路称为“异或”门。该门电路有两个输入端和一个输出端。其中，A、B为输入端，F为输出端。</p>
-<p><img src="/article/98aecef/image-20211017104135446.png" alt="image-20211017104135446"></p>
-<center><b>“异或”门真值表</b></center>
-
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-</tbody></table>
-<p>与“异或”运算相反，还有另外一个复合运算称为“同或”运算。其逻辑关系可写成如下形式：</p>
-<p><img src="/article/98aecef/image-20211017105237533.png" alt="image-20211017105237533"></p>
-<p>“同或”运算逻辑表达式的含义是：<font color="red">当A、B取值相同时，F的值为1；当A、B取值相异时，F的值为0。</font>换句话说，当两个变量取值相同时，函数值为1；而当两个变量不同时，函数值为0。因此，“同或”逻辑关系又可写成如下形式：</p>
-<p><img src="/article/98aecef/image-20211017105458176.png" alt="image-20211017105458176"></p>
-<p>不难看出，“同或”逻辑和“异或”逻辑是互补的，即</p>
-<p><img src="/article/98aecef/image-20211017105536315.png" alt="image-20211017105536315"></p>
-<p>异或是同或的非，同或是异或的非。</p>
-<center><b>“同或”运算真值表</b></center>
-
-<table>
-<thead>
-<tr>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">F</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>0</strong></td>
-<td align="center"><strong>0</strong></td>
-</tr>
-<tr>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-<td align="center"><strong>1</strong></td>
-</tr>
-</tbody></table>
-<h3 id="3-2-逻辑函数的实现"><a href="#3-2-逻辑函数的实现" class="headerlink" title="3.2 逻辑函数的实现"></a><strong>3.2 逻辑函数的实现</strong></h3><p>函数的表现形式和实际的逻辑电路之间有着对应的关系，而实际逻辑电路大量使用“与非”门、“或非”门、“与或非”门等。</p>
-<p>”与“、”或“、”非“运算时逻辑代数的基本运算。通过这些基本运算，逻辑函数可以表示成许多种不同的形式，通常遇到的有以下几种：“与-或”表达式，“或-与”表达式；“与非-与非”表达式，“或非-或非”表达式，“与-或-非”表达式。</p>
-<h4 id="3-2-1-用“与非”门实现逻辑函数"><a href="#3-2-1-用“与非”门实现逻辑函数" class="headerlink" title="3.2.1 用“与非”门实现逻辑函数"></a><strong>3.2.1 用“与非”门实现逻辑函数</strong></h4><p>第一步 求出函数的最简“与-或”式(卡诺图圈1)</p>
-<p>第二步 将其变换成“与非-与非”式(两次取反)</p>
-<p>第三步 画出与函数表达式对应的逻辑电路图</p>
-<p><img src="/article/98aecef/image-20211017174947184.png" alt="image-20211017174947184"></p>
-<p><img src="/article/98aecef/image-20211017174957694.png" alt="image-20211017174957694"></p>
-<h3 id="3-3-组合逻辑电路的分析"><a href="#3-3-组合逻辑电路的分析" class="headerlink" title="3.3 组合逻辑电路的分析"></a><strong>3.3 组合逻辑电路的分析</strong></h3><p>分析的任务：</p>
-<p>根据给定的组合电路，写出逻辑函数表达式，并以此来描述它的逻辑功能，确定输入与输出的关系，必要时对其设计的合理性进行评定。</p>
-<p>分析的一般步骤：</p>
-<p>第一步；写出给定组合电路的逻辑函数表达式；</p>
-<p>第二步：化简逻辑函数表达式；(不一定化到最简)</p>
-<p>第三步：根据化简的结果列出真值表；</p>
-<p>第四步：功能评述。</p>
-<p><img src="/article/98aecef/image-20211017110838258.png" alt="image-20211017110838258"></p>
-<p><img src="/article/98aecef/image-20211017110846149.png" alt="image-20211017110846149"></p>
-<p><img src="/article/98aecef/image-20211017110854833.png" alt="image-20211017110854833"></p>
-<p><img src="/article/98aecef/image-20211017110900326.png" alt="image-20211017110900326"></p>
-<p><img src="/article/98aecef/image-20211017110910913.png" alt="image-20211017110910913"></p>
-<p><img src="/article/98aecef/image-20211017110919790.png" alt="image-20211017110919790"></p>
-<p><img src="/article/98aecef/image-20211017110927526.png" alt="image-20211017110927526"></p>
-<p><img src="/article/98aecef/image-20211017110936346.png" alt="image-20211017110936346"></p>
-<p><img src="/article/98aecef/image-20211017110943552.png" alt="image-20211017110943552"></p>
-]]></content>
-      <categories>
-        <category>-数字逻辑</category>
-      </categories>
-      <tags>
-        <tag>简单逻辑门电路</tag>
-        <tag>复合逻辑门电路</tag>
-        <tag>逻辑函数电路分析</tag>
       </tags>
   </entry>
   <entry>
