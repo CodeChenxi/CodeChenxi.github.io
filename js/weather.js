@@ -1,4 +1,3 @@
-<script>
 WIDGET = {
   "CONFIG": {
     "modules": "01234", 
@@ -20,5 +19,3 @@ WIDGET = {
     "key": "71251781e33f4fd89bae77ace374ab54"
      }
 }
-</script>
-/* <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> */
