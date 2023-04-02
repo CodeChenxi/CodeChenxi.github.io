@@ -1,6 +1,6 @@
 // 动态心跳
 $(document).ready(function(e){
-    $('.copyright').html('©2023 <i class="fa-fw fas fa-heartbeat fa-beat" style="color: #f92672;"></i> By CodeChenxi');
+    $('.copyright').html('<font style=color:black>©2023</font> <i class="fa-fw fas fa-heartbeat fa-beat" style="color: #f92672;"></i> <font style=color:black>By CodeChenxi</font>');
 })
 
 $(document).ready(function(e){
