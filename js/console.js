@@ -16,7 +16,7 @@ function createtime1() {
 
     var ascll = [
         `欢迎来到CodeChenxiの小家!`,
-        `Future is now 🍭🍭🍭`,
+        `宁静以致远 🍭🍭🍭`,
         `
         
 
