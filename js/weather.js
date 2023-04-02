@@ -13,10 +13,9 @@ WIDGET = {
     "padding": "10px 10px 10px 10px",
     "shadow": "0",
     "language": "auto",
-    "fixed": "true",
+    "fixed": "false",
     "vertical": "top",
     "horizontal": "left",
-    "city": "CN101010100",
     "key": "71251781e33f4fd89bae77ace374ab54"
      }
 }
