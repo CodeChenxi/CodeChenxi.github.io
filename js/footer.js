@@ -1,6 +1,14 @@
+/*
+ * @Descripttion: 
+ * @version: 1.0
+ * @Author: 林志强
+ * @Date: 2023-04-02 13:28:42
+ * @LastEditors: 林志强
+ * @LastEditTime: 2023-04-05 12:11:41
+ */
 // 动态心跳
 $(document).ready(function(e){
-    $('.copyright').html('<font style=color:black>©2023</font> <i class="fa-fw fas fa-heartbeat fa-beat" style="color: #f92672;"></i> <font style=color:black>By CodeChenxi</font>');
+    $('.copyright').html('<font style=color:black>©2023-2024</font> <i class="fa-fw fas fa-heartbeat fa-beat" style="color: #f92672;"></i> <font style=color:black>By CodeChenxi</font>');
 })
 
 $(document).ready(function(e){
