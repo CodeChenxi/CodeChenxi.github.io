@@ -11,6 +11,12 @@
         <content type="html"><![CDATA[<h1 id="1-MyBatis-简介"><a href="#1-MyBatis-简介" class="headerlink" title="1. MyBatis 简介"></a>1. MyBatis 简介</h1><p>MyBatis 最初是 Apache 的一个开源项目 iBatis, 2010年6月这个项目由 Apache Software Foundation 迁移到了Google Code。随着开发团队转投 Google Code 旗下， iBatis3.x 正式更名为 MyBatis。代码于2013年11月迁移到 Github。<br>iBatis一词来源于“internet”和“abatis”的组合，是一个基于 Java 的持久层框架。 iBatis 提供的持久层框架包括 SQL Maps 和 Data Access Objects（DAO）。</p>]]></content>
       
       
+      <categories>
+          
+          <category> MyBatis </category>
+          
+      </categories>
+      
       
         <tags>
             
