@@ -8,7 +8,7 @@
       <link href="/posts/daadc55c.html"/>
       <url>/posts/daadc55c.html</url>
       
-        <content type="html"><![CDATA[<p><img src="https://linchenxi123.oss-cn-fuzhou.aliyuncs.com/MyBatis3/chapter01/20230405203039.png"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://linchenxi123.oss-cn-fuzhou.aliyuncs.com/MyBatis3/chapter01/20230405203039.png"></p><hr><h2 id="1-开发环境"><a href="#1-开发环境" class="headerlink" title="1. 开发环境"></a>1. 开发环境</h2><ul><li><p>​<strong>IDE：IntelliJ IDEA 2022.3 (Ultimate Edition)</strong></p></li><li><p>​<strong>构建工具：Apache Maven 3.8.6</strong>  </p></li><li><p>​<strong>MySQL版本：MySQL 5.5.62</strong>  </p></li><li><p>​<strong>MyBatis版本：MyBatis 3.5.11</strong></p></li></ul><blockquote><p>MySQL不同版本的注意事项</p><p>1、驱动类driver-class-name</p><p>MySQL 5版本使用 jdbc5 驱动，驱动类使用：com.mysql.jdbc.Driver</p><p>MySQL 8版本使用 jdbc8 驱动，驱动类使用：com.mysql.cj.jdbc.Driver</p></blockquote>]]></content>
       
       
       <categories>
