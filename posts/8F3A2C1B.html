@@ -390,13 +390,13 @@
 <p><strong>1、将 mapper 接口方法的返回值设置为泛型是 map 的 list 集合</strong></p>
 <p><strong>结果：</strong></p>
 <p><strong>{</strong></p>
-<p><strong>password&#x3D;123456,gender&#x3D;男,id&#x3D;1,age&#x3D;23,email&#x3D;<a href="mailto:&#x31;&#50;&#51;&#52;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#109;">&#x31;&#50;&#51;&#52;&#x40;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a>,username&#x3D;admin</strong></p>
+<p><strong>password&#x3D;123456,gender&#x3D;男,id&#x3D;1,age&#x3D;23,email&#x3D;<a href="mailto:&#49;&#50;&#x33;&#52;&#64;&#113;&#113;&#x2e;&#99;&#x6f;&#x6d;">&#49;&#50;&#x33;&#52;&#64;&#113;&#113;&#x2e;&#99;&#x6f;&#x6d;</a>,username&#x3D;admin</strong></p>
 <p><strong>}</strong></p>
 <p><strong>2、可以将每条数据转换的 map 集合放在一个大的 map 中，但是必须要通过 @MapKey 注解将查询的某个字段的值作为大的 map 的键</strong></p>
 <p><strong>@MapKey(“id”)</strong></p>
 <p><strong>结果：</strong></p>
-<p><strong>{</strong><br>    <strong>1&#x3D;{password&#x3D;123456, gender&#x3D;男, id&#x3D;1, age&#x3D;23, email&#x3D;<a href="mailto:&#x31;&#x32;&#51;&#x34;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#x31;&#x32;&#51;&#x34;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a>, username&#x3D;admin},</strong></p>
-<p>​    <strong>8&#x3D;{password&#x3D;123456, gender&#x3D;女, id&#x3D;8, age&#x3D;33, email&#x3D;<a href="mailto:&#49;&#50;&#51;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;">&#49;&#50;&#51;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a>, username&#x3D;root},</strong></p>
+<p><strong>{</strong><br>    <strong>1&#x3D;{password&#x3D;123456, gender&#x3D;男, id&#x3D;1, age&#x3D;23, email&#x3D;<a href="mailto:&#x31;&#50;&#x33;&#52;&#53;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#x31;&#50;&#x33;&#52;&#53;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a>, username&#x3D;admin},</strong></p>
+<p>​    <strong>8&#x3D;{password&#x3D;123456, gender&#x3D;女, id&#x3D;8, age&#x3D;33, email&#x3D;<a href="mailto:&#x31;&#x32;&#51;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#x31;&#x32;&#51;&#x40;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a>, username&#x3D;root},</strong></p>
 <p>​    <strong>9&#x3D;{password&#x3D;123, id&#x3D;9, username&#x3D;admin}</strong></p>
 <p><strong>｝</strong></p>
 </blockquote>
